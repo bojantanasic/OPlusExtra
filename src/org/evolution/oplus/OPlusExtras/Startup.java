@@ -12,7 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 
-import org.evolution.oplus.OPlusExtras.kcal.Kcal;
+
 
 
 public class Startup extends BroadcastReceiver {
@@ -40,14 +40,6 @@ public class Startup extends BroadcastReceiver {
             OPlusExtras.restoreFastChargeSetting(context);
             OPlusExtras.restoreOTGSetting(context);
             OPlusExtras.restoreVibratorStrengthSetting(context);
-            // Kcal
-            Kcal.restoreRedSetting(context);
-            Kcal.restoreGreenSetting(context);
-            Kcal.restoreBlueSetting(context);
-            Kcal.restoreSaturationSetting(context);
-            Kcal.restoreContrastSetting(context);
-            Kcal.restoreHueSetting(context);
-            Kcal.restoreValueSetting(context);
-       
+                   
     }
 }
