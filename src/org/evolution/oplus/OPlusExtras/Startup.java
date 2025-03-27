@@ -40,8 +40,6 @@ public class Startup extends BroadcastReceiver {
             OPlusExtras.restoreFastChargeSetting(context);
             OPlusExtras.restoreOTGSetting(context);
             OPlusExtras.restoreVibratorStrengthSetting(context);
-            // Doze
-            DozeUtils.checkDozeService(context);
             // Kcal
             Kcal.restoreRedSetting(context);
             Kcal.restoreGreenSetting(context);
