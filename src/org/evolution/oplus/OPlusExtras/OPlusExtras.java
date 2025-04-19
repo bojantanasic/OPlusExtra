@@ -48,8 +48,6 @@ public class OPlusExtras extends PreferenceFragment
     private static final String KEY_TOUCHBOOST = "touchboost";
     private SwitchPreference mTouchboostModeSwitch;
 
-    // Display
-    private static final String KEY_AMBIENT_DISPLAY_GESTURES = "ambient_display_gestures_settings";
 
     private static final String KEY_ANTIFLICKER = "antiflicker";
     private static final String KEY_ANTIFLICKER_INFO = "antiflicker_info";
@@ -59,8 +57,7 @@ public class OPlusExtras extends PreferenceFragment
     private static final String KEY_HBM_INFO = "hbm_info";
     private SwitchPreference mHBMModeSwitch;
 
-    private static final String KEY_KCAL = "kcal";
-
+ 
     private static final String KEY_KEEP_PCC = "keep_pcc";
     private SwitchPreference mKeepPCCModeSwitch;
 
@@ -167,11 +164,6 @@ public class OPlusExtras extends PreferenceFragment
             findPreference(KEY_TOUCHBOOST).setVisible(false);
         }
 
-       // Ambient display gestures
-       if (!getResources().getBoolean(R.bool.config_deviceSupportsAmbientDisplayGestures)) {
-            findPreference(KEY_AMBIENT_DISPLAY_GESTURES).setVisible(false);
-        }
-
         // Anti-flicker switch
         mAntiFlickerModeSwitch = (SwitchPreference) findPreference(KEY_ANTIFLICKER);
         if (Utils.isFileWritable(Nodes.nodeAntiFlicker(context))) {
@@ -202,12 +194,7 @@ public class OPlusExtras extends PreferenceFragment
             findPreference(KEY_HBM_INFO).setVisible(false);
         }
 
-        // Kernel color calibartion
-        if (!getResources().getBoolean(R.bool.config_deviceSupportsKcal)) {
-            findPreference(KEY_KCAL).setVisible(false);
-        }
-
-        // Keep PCC enabled switch
+         // Keep PCC enabled switch
         mKeepPCCModeSwitch = (SwitchPreference) findPreference(KEY_KEEP_PCC);
         if (Utils.isFileWritable(Nodes.nodeKeepPCC(context))) {
             mKeepPCCModeSwitch.setEnabled(true);

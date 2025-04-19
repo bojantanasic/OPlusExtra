@@ -91,16 +91,6 @@
             android:summary="@string/hbm_info" 
             android:persistent="false" />
 
-        <Preference
-            android:key="kcal"
-            android:title="@string/kcal_title"
-            android:summary="@string/kcal_summary"
-            android:persistent="false" >
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="org.evolution.oplus.OPlusExtras"
-                    android:targetClass="org.evolution.oplus.OPlusExtras.kcal.KcalActivity" />
-        </Preference>
-
         <SwitchPreference
             android:key="keep_pcc"
             android:title="@string/keep_pcc_title"
